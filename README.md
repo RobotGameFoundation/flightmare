@@ -44,7 +44,7 @@ First, [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/
 
 4. In a new terminal, run the container with(remember to change the `path_to_dodge_drone_challenge_folder`!)
    
-   `docker run -it -v path_to_dodge_drone_challenge_folder:/root/challenge/ --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all  -p 10253:10253 -p 10254:10254 --name ddc-challenge uzhrpg/dodgedrone-challenge:base /bin/bash`
+   `docker run -it -v path_to_dodge_drone_challenge_folder:/root/challenge/ --rm --gpus all -e NVIDIA_VISIBLE_DEVICES=all  -p 10253:10253 -p 10254:10254 --name ddc-challenge uzhrpg/dodgedrone-challenge:base /bin/bash`
    
    Breakdown of the command:
    
